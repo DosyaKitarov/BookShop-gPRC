@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package BookShop;
+
+option go_package = "cmd/web";
+
+import "annotations.proto";
+import "bookshop_auth.proto";
+
+service Service {
+  rpc Register(RegisterRequest) returns (RegisterResponse) {
+    option (google.api.http) = {
+      post: "/register"
+      body: "*"
+    };
+  }
+  rpc Login(LoginRequest) returns (LoginResponse) {
+    option (google.api.http) = {
+      post: "/login"
+      body: "*"
+    };
+  }
+}
