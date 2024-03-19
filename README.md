@@ -1,16 +1,16 @@
 # BookShop-gRPC
 
-Это fullstack проект для онлайн магазина книг. Дизайн, фронт, бэк все было сделано мной. В этой ветке(main) находится весь проект, только фронт(вместе с просмотром через gihub pages) будет в ветке Front, а бэк в ветке Back. 
+Это fullstack проект для онлайн магазина книг. Дизайн, фронт, бэк все было сделано мной. В этой ветке(main) находится весь проект, только фронт(вместе с просмотром через github pages) будет в ветке Front, а бэк в ветке Back. 
 
 ## Стек технологий
-Бэк:
+# Бэк:
 - Go
 - gRPC
 - gRPC-Gateway
 - MongoDB
 - Redis
 - Docker
-Фронт:
+# Фронт:
 - React?
 - TypeScript?
 - AnimeJS?
@@ -41,14 +41,7 @@ MONGO_URI=<ваша ссылка>
 
 ## Генерация кода gRPC
 ```sh
-protoc --proto_path=api/proto \
-    --go_out=pkg/grpc \
-    --go_opt=paths=source_relative \
-    --go-grpc_out=pkg/grpc \
-    --go-grpc_opt=paths=source_relative \
-    api/proto/bookshop_*.proto \
-    --grpc-gateway_out=pkg/grpc \
-    --grpc-gateway_opt=paths=source_relative
+protoc --proto_path=api/proto --go_out=pkg/grpc --go_opt=paths=source_relative --go-grpc_out=pkg/grpc --go-grpc_opt=paths=source_relative api/proto/bookshop_*.proto --grpc-gateway_out=pkg/grpc --grpc-gateway_opt=paths=source_relative
 ```
 
 ### 3. Запустите проект
