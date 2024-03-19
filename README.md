@@ -44,7 +44,7 @@ MONGO_URI=<ваша ссылка>
 protoc --proto_path=api/proto --go_out=pkg/grpc --go_opt=paths=source_relative --go-grpc_out=pkg/grpc --go-grpc_opt=paths=source_relative api/proto/bookshop_*.proto --grpc-gateway_out=pkg/grpc --grpc-gateway_opt=paths=source_relative
 ```
 
-## 3. Запустите проект
+## 4. Запустите проект
 ```sh
 go run ./cmd/web
 ```
